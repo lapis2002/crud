@@ -1,0 +1,40 @@
+{% extends "inventory/base.html" %}
+
+{% block content %}
+  <h1>Product List</h1>
+  {% if product_list %}
+  <table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Sold</th>
+            <th scope="col">Category</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+      {% for product in product_list %}
+        <tr>
+            <th scope="row"><a href="{{ product.get_absolute_url }}">{{ product.product_name }}</a></th>
+            <td>{{ product.product.unit_price }}</td>
+            <td>{{ product.total_quantity }}</td>
+            <td>{{ product.sold }}</td>
+            <td>{{ product.category_id.all|join:", " }}</td>
+            <td>
+                <a style="margin-right: 30px;" href="{{ product.get_absolute_url }}update/">Edit</a>
+                <a href="{{ product.get_absolute_url }}delete/">Remove</a>
+            </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+</table>
+{% else %}
+  <p>There are no product in the inventory.</p>
+{% endif %}
+<div class="text-center">
+  <a href="{% url 'create_product' %}"><button type="button" class="btn btn-primary">Add New Product</button></a>
+  <a href="{% url 'export_csv' %}"><button type="button" class="btn btn-primary">Export CSV File</button></a>
+</div>
+{% endblock %}

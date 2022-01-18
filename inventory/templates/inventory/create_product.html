@@ -1,0 +1,15 @@
+{% extends "inventory/base.html" %}
+
+{% block content %}
+    <h1>Create new product</h1>
+    <a href="{% url 'create_category' %}"><button type="button" class="btn btn-primary">Can't find your category? Add new one here.</button></a>
+    <form method="POST" enctype="multipart/form-data">
+        <!-- Security token -->
+        {% csrf_token %}
+  
+        <!-- Using the formset -->
+        {{ form.as_p }}
+      
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
