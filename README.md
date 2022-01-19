@@ -28,7 +28,8 @@ pip install -r requirements.txt
 python3 manage.py runserver
 ```
 
-Then go to 127.0.0.1:8000/inventory/
+Then go to 
+`127.0.0.1:8000/inventory/`
 
 ![Inventory Page](img/crud_inventory.png)
 ### **All basic features of a CRUD app**
