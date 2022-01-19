@@ -18,7 +18,7 @@
       {% for product in product_list %}
         <tr>
             <th scope="row"><a href="{{ product.get_absolute_url }}">{{ product.product_name }}</a></th>
-            <td>{{ product.product.unit_price }}</td>
+            <td>{{ product.unit_price }}</td>
             <td>{{ product.total_quantity }}</td>
             <td>{{ product.sold }}</td>
             <td>{{ product.category_id.all|join:", " }}</td>

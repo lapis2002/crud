@@ -31,9 +31,9 @@ python3 manage.py runserver
 Then go to 127.0.0.1:8000/inventory/
 
 ![Inventory Page](img/crud_inventory.png)
-### **All basic features of a CRUD app**
+### **All basic features of a CRUD app are implemented.**
 
-* Viewing the current list of products:
+* **Viewing the current list of products:**
 
 ![Products List Page](img/crud_products_list.png)
 
@@ -42,49 +42,58 @@ Adding a new product option is also available.
 ```
 127.0.0.1:8000/inventory/products
 ```
-* Viewing the detail of a product:
+* **Viewing the detail of a product:**
 
 ![Products List Page](img/crud_product_detail.png)
 
 ```
 127.0.0.1:8000/inventory/product/<uuid:product_id>
 ```
-* Adding a new product
+* **Adding a new product:**
+  
 There is a button to add new product at the end of the products table
 
-![Create Product Page](img/crud_product_create.png)
 ```
 127.0.0.1:8000/inventory/products/create
 ```
-* Editting a product
+
+![Create Product Page](img/crud_product_create.png)
+
+* **Editting a product:**
 
 From the products list, click on the product that you want to edit.
 
-![Edit Product Page](img/crud_product_edit.png)
 ```
 127.0.0.1:8000/inventory/product/<uuid:product_id>/edit
 ```
-* Deleting a product
 
-![Delete Product Page](img/crud_product_delete.png)
+![Edit Product Page](img/crud_product_edit.png)
+
+
+* **Deleting a product:**
 
 From the products list, click on the product that you want to delete.
+
 ```
 127.0.0.1:8000/inventory/product/<uuid:product_id>/delete
 ```
-* Additionally,the list of available categories can be viewed from the products list page.
 
-![Categories List Product Page](img/crud_categories_list.png)
+![Delete Product Page](img/crud_product_delete.png)
+
+* **Additionally, the list of available categories can be viewed from the products list page:**
 
 ```
 127.0.0.1:8000/inventory/categories
 ```
-### **More features**
-### Exporting the current list of products to csv file
+![Categories List Product Page](img/crud_categories_list.png)
 
+### **More features**
+* **Exporting the current list of products to csv file:**
+  
+To download the current list of products as `csv` file, you can go to the products list (127.0.0.1:8000/inventory/products), click on the `Export` button at the end of the table. The default name for the file is `table.csv`. A message box will be prompt to confirm the choice when clicking the `Export` button.
 ![Products List Page](img/crud_products_list.png)
 
-To download the current list of products as `csv` file, you can go to the products list (127.0.0.1:8000/inventory/products), click on the `Export` button at the end of the table. The default name for the file is `table.csv`. A message box will be prompt to confirm the choice when clicking the `Export` button.
+
 ### **Upcoming features**
 * Allow image uploads AND store image with generated thumbnails
 * When deleting, allow deletion comments and undeletion
@@ -93,6 +102,9 @@ To download the current list of products as `csv` file, you can go to the produc
 * Ability to create warehouses/locations and assign inventory to specific locations
 * Ability to create “shipments” and assign inventory to the shipment, and adjust inventory appropriately
 * Ability to generate a report on inventory levels over time, like: most in-stock or out-of-stock last month
+
+## Data Model (Updating)
+![ER Diagram](img/er_diagram.png)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
