@@ -36,20 +36,21 @@ Then go to
 
 * **Viewing the current list of products:**
 
-![Products List Page](img/crud_products_list.png)
-
 To view the detail of a product in the list, click on the name of the product. You can edit or delete a product from the action column.
 Adding a new product option is also available.
 ```
 127.0.0.1:8000/inventory/products
 ```
-* **Viewing the detail of a product:**
 
-![Products List Page](img/crud_product_detail.png)
+![Products List Page](img/crud_products_list.png)
+
+* **Viewing the detail of a product:**
 
 ```
 127.0.0.1:8000/inventory/product/<uuid:product_id>
 ```
+![Products List Page](img/crud_product_detail.png)
+
 * **Adding a new product:**
   
 There is a button to add new product at the end of the products table
