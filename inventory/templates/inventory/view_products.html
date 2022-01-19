@@ -8,7 +8,7 @@
         <tr>
             <th scope="col">Name</th>
             <th scope="col">Unit Price</th>
-            <th scope="col">Quantity</th>
+            <th scope="col">Available</th>
             <th scope="col">Sold</th>
             <th scope="col">Category</th>
             <th scope="col">Action</th>
@@ -35,6 +35,7 @@
 {% endif %}
 <div class="text-center">
   <a href="{% url 'create_product' %}"><button type="button" class="btn btn-primary">Add New Product</button></a>
+  <a href="{% url 'categories' %}"><button type="button" class="btn btn-primary">View All the Categories</button></a>
   <a href="{% url 'export_csv' %}"><button type="button" class="btn btn-primary">Export CSV File</button></a>
 </div>
 {% endblock %}
